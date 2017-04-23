@@ -25,6 +25,8 @@
         [self.view addSubview:tabBarController.view];
         [self addChildViewController:tabBarController];
     }
+    
+    NSLog(@"test");
 }
 
 
