@@ -13,6 +13,12 @@
 		27229AFB1EA8B0A9002B242B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27229AF91EA8B0A9002B242B /* Main.storyboard */; };
 		27229AFD1EA8B0A9002B242B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27229AFC1EA8B0A9002B242B /* Assets.xcassets */; };
 		27229B001EA8B0A9002B242B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27229AFE1EA8B0A9002B242B /* LaunchScreen.storyboard */; };
+		27E34B261EAC5BE20030099A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E34B251EAC5BE20030099A /* FirstViewController.m */; };
+		27E34B291EAC5C6B0030099A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E34B281EAC5C6B0030099A /* SecondViewController.m */; };
+		27E34B2D1EAC5F1F0030099A /* DeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E34B2B1EAC5F1F0030099A /* DeviceTableViewCell.m */; };
+		27E34B2E1EAC5F1F0030099A /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E34B2C1EAC5F1F0030099A /* DeviceTableViewCell.xib */; };
+		27E34B321EAC64CC0030099A /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E34B311EAC64CC0030099A /* ThirdViewController.m */; };
+		27E34B361EAC668D0030099A /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E34B351EAC668D0030099A /* ScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,17 @@
 		27229AFC1EA8B0A9002B242B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27229AFF1EA8B0A9002B242B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27229B011EA8B0A9002B242B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E34B241EAC5BE20030099A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		27E34B251EAC5BE20030099A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		27E34B271EAC5C6B0030099A /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		27E34B281EAC5C6B0030099A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		27E34B2A1EAC5F1F0030099A /* DeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewCell.h; sourceTree = "<group>"; };
+		27E34B2B1EAC5F1F0030099A /* DeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
+		27E34B2C1EAC5F1F0030099A /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		27E34B301EAC64CC0030099A /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		27E34B311EAC64CC0030099A /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		27E34B341EAC668D0030099A /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		27E34B351EAC668D0030099A /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,8 @@
 		27229AEF1EA8B0A9002B242B /* BFGarage */ = {
 			isa = PBXGroup;
 			children = (
+				27E34B371EAC68040030099A /* AppContext */,
+				27E34B211EAC5BBC0030099A /* Bussiness */,
 				27229AF31EA8B0A9002B242B /* AppDelegate.h */,
 				27229AF41EA8B0A9002B242B /* AppDelegate.m */,
 				27229AF61EA8B0A9002B242B /* ViewController.h */,
@@ -77,6 +96,63 @@
 				27229AF11EA8B0A9002B242B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27E34B211EAC5BBC0030099A /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				27E34B221EAC5BBC0030099A /* FirstItem */,
+				27E34B231EAC5BBC0030099A /* SecondItem */,
+				27E34B2F1EAC64A40030099A /* ThirdItem */,
+			);
+			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		27E34B221EAC5BBC0030099A /* FirstItem */ = {
+			isa = PBXGroup;
+			children = (
+				27E34B241EAC5BE20030099A /* FirstViewController.h */,
+				27E34B251EAC5BE20030099A /* FirstViewController.m */,
+			);
+			path = FirstItem;
+			sourceTree = "<group>";
+		};
+		27E34B231EAC5BBC0030099A /* SecondItem */ = {
+			isa = PBXGroup;
+			children = (
+				27E34B331EAC66130030099A /* Detail */,
+				27E34B271EAC5C6B0030099A /* SecondViewController.h */,
+				27E34B281EAC5C6B0030099A /* SecondViewController.m */,
+				27E34B2A1EAC5F1F0030099A /* DeviceTableViewCell.h */,
+				27E34B2B1EAC5F1F0030099A /* DeviceTableViewCell.m */,
+				27E34B2C1EAC5F1F0030099A /* DeviceTableViewCell.xib */,
+			);
+			path = SecondItem;
+			sourceTree = "<group>";
+		};
+		27E34B2F1EAC64A40030099A /* ThirdItem */ = {
+			isa = PBXGroup;
+			children = (
+				27E34B301EAC64CC0030099A /* ThirdViewController.h */,
+				27E34B311EAC64CC0030099A /* ThirdViewController.m */,
+			);
+			path = ThirdItem;
+			sourceTree = "<group>";
+		};
+		27E34B331EAC66130030099A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				27E34B341EAC668D0030099A /* ScanViewController.h */,
+				27E34B351EAC668D0030099A /* ScanViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		27E34B371EAC68040030099A /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppContext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +216,7 @@
 				27229B001EA8B0A9002B242B /* LaunchScreen.storyboard in Resources */,
 				27229AFD1EA8B0A9002B242B /* Assets.xcassets in Resources */,
 				27229AFB1EA8B0A9002B242B /* Main.storyboard in Resources */,
+				27E34B2E1EAC5F1F0030099A /* DeviceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E34B291EAC5C6B0030099A /* SecondViewController.m in Sources */,
 				27229AF81EA8B0A9002B242B /* ViewController.m in Sources */,
 				27229AF51EA8B0A9002B242B /* AppDelegate.m in Sources */,
+				27E34B361EAC668D0030099A /* ScanViewController.m in Sources */,
 				27229AF21EA8B0A9002B242B /* main.m in Sources */,
+				27E34B261EAC5BE20030099A /* FirstViewController.m in Sources */,
+				27E34B2D1EAC5F1F0030099A /* DeviceTableViewCell.m in Sources */,
+				27E34B321EAC64CC0030099A /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +391,7 @@
 				27229B061EA8B0A9002B242B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

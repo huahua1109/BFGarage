@@ -10,13 +10,21 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) UITabBarController *tabBarController;
 @end
 
 @implementation ViewController
+@synthesize tabBarController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    if (!tabBarController) {
+        tabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"RootTabBarController"];
+        [self.view addSubview:tabBarController.view];
+        [self addChildViewController:tabBarController];
+    }
 }
 
 
