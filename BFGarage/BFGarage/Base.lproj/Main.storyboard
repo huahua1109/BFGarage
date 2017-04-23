@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,25 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-nR-aLV">
-                                <rect key="frame" x="0.0" y="99" width="375" height="519"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-nR-aLV">
+                                <rect key="frame" x="0.0" y="134" width="375" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kq-dm-957">
-                                <rect key="frame" x="44" y="44" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kq-dm-957">
+                                <rect key="frame" x="44" y="94" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lkj-qC-Wfh"/>
+                                </constraints>
                                 <state key="normal" title="连接"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-yr-ATA">
-                                <rect key="frame" x="228" y="44" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-yr-ATA">
+                                <rect key="frame" x="254" y="94" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NmN-DF-wHE"/>
+                                </constraints>
                                 <state key="normal" title="扫描二维码"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Kq-dm-957" firstAttribute="leading" secondItem="Nwy-ar-WcI" secondAttribute="leadingMargin" constant="28" id="NOe-W9-nUc"/>
+                            <constraint firstAttribute="trailing" secondItem="cCw-nR-aLV" secondAttribute="trailing" id="WPU-qm-nOe"/>
+                            <constraint firstItem="cCw-nR-aLV" firstAttribute="leading" secondItem="Nwy-ar-WcI" secondAttribute="leading" id="gUD-nN-Tmp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JdL-yr-ATA" secondAttribute="trailing" constant="28" id="l3W-zj-41m"/>
+                            <constraint firstItem="2Kq-dm-957" firstAttribute="top" secondItem="o7i-Ij-EK6" secondAttribute="bottom" constant="30" id="pcN-Cn-Q2T"/>
+                            <constraint firstItem="cCw-nR-aLV" firstAttribute="top" secondItem="JdL-yr-ATA" secondAttribute="bottom" constant="10" id="vDX-Rj-m42"/>
+                            <constraint firstItem="BdT-Gk-Ev3" firstAttribute="top" secondItem="cCw-nR-aLV" secondAttribute="bottom" id="wmY-Zk-Rhp"/>
+                            <constraint firstItem="JdL-yr-ATA" firstAttribute="top" secondItem="o7i-Ij-EK6" secondAttribute="bottom" constant="30" id="zVf-tE-HPM"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="vNh-V2-UUb" userLabel="Settings"/>
+                    <navigationItem key="navigationItem" id="kL6-6s-NxU"/>
                     <connections>
                         <outlet property="linkButton" destination="2Kq-dm-957" id="jOe-Y9-xu2"/>
                         <outlet property="rootTableView" destination="cCw-nR-aLV" id="eWR-en-xPW"/>
@@ -48,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y58-h9-2r9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1063.2" y="609.44527736131943"/>
+            <point key="canvasLocation" x="132" y="753.37331334332839"/>
         </scene>
         <!--ThirdViewController-->
         <scene sceneID="hYA-QW-zu3">
@@ -69,6 +83,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gx-yt-0f6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2018" y="1295"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="p6T-kl-Q2c">
+            <objects>
+                <navigationController id="CAF-TM-acy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Setting" id="OEs-30-ujZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6JU-y3-iZE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FZ8-db-eJY" kind="relationship" relationship="rootViewController" id="akI-BK-CpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNT-NG-sBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-991" y="755"/>
         </scene>
         <!--FirstViewController-->
         <scene sceneID="aa1-8Q-VEo">
@@ -100,8 +131,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="yds-Ru-Pin" kind="relationship" relationship="viewControllers" id="Sya-Nw-k3R"/>
-                        <segue destination="FZ8-db-eJY" kind="relationship" relationship="viewControllers" id="eBf-iX-EqJ"/>
-                        <segue destination="vg3-nG-2kN" kind="relationship" relationship="viewControllers" id="LlO-HY-pyo"/>
+                        <segue destination="CAF-TM-acy" kind="relationship" relationship="viewControllers" id="SAb-hi-Ge9"/>
+                        <segue destination="vg3-nG-2kN" kind="relationship" relationship="viewControllers" id="bMT-u3-bqu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhV-AN-5Ku" userLabel="First Responder" sceneMemberID="firstResponder"/>

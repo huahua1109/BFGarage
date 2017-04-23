@@ -29,6 +29,8 @@
     
     UINib *UserCenterLeftContentCellNib = [UINib nibWithNibName:@"DeviceTableViewCell" bundle:nil];
     [self.rootTableView registerNib:UserCenterLeftContentCellNib forCellReuseIdentifier:@"DeviceTableViewCell"];
+    
+    self.navigationItem.title = @"Setting";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,8 +52,6 @@
 {
     static NSString *cellIndentifierStr = @"DeviceTableViewCellIdentifier";
     DeviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifierStr forIndexPath:indexPath];
-    
-    
     
     return cell;
 }
